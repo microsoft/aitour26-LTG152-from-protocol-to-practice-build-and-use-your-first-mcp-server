@@ -17,7 +17,7 @@ Prior to delivering the workshop please:
 | Docs | [../docs/README.md](../docs/README.md) | Presenter-facing overview and pointers. |
 | Server Code | [../src/main.py](../src/main.py) | Minimal MCP server implementation. |
 | Train‑the‑Trainer Video | https://aka.ms/tbd-train-video | Recording for presenters (placeholder). |
-| Slide Deck | https://aka.ms/tbd-slide-deck | Slide deck for presenters (placeholder). |
+| Slide Deck | https://aka.ms/AAxtv82 | Slide deck for presenters. |
 
 
 ## 🚀 Get Started
