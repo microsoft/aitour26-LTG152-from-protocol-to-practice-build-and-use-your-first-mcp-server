@@ -34,6 +34,7 @@ This is a 15‑minute talk with two short demos (no labs).
 | 12:00 – 15:00 | Slides: Best practices and conclusion. |
 
 ### 🏋️ Preparation
+- The slide deck has recorded demos in case you do not want to run it live. 
 - Ensure Python 3.12+, `uv`, and dependencies are installed (see `../src/README.md`).
 - Use the provided `.vscode/mcp.json` to start the MCP server with the venv interpreter; open the Output view.
 - Verify `data/expenses.csv` exists (it’s provided in the repo) and note this is the ledger file that will be appended to.
