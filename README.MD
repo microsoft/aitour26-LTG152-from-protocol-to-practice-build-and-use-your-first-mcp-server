@@ -15,7 +15,6 @@ If you will be delivering this session, check the [session-delivery-sources](./s
 
 In this talk, discover how the Model Context Protocol (MCP) is transforming the way AI agents connect with tools, data and each other in a standardized way and is becoming part of the Microsoft ecosystem, whether you're working in Azure AI Foundry, Copilot Studio or GitHub Copilot. MCP is more than a protocol—it’s the connective tissue for building intelligent, interoperable systems. You’ll get a fast-paced, hands-on introduction to MCP fundamentals, then dive into building your own MCP server, using it in VS Code as the host and GitHub Copilot as the client.
 
-
 ### 🧠 Learning Outcomes
 
 By the end of this session, learners will be able to:
@@ -24,7 +23,6 @@ By the end of this session, learners will be able to:
 - Build and run a minimal Python MCP server that writes to and reads from a CSV ledger.
 - Invoke the server from GitHub Copilot Chat in VS Code using a prompt that triggers a typed tool and retrieves a resource.
 
-
 ### 💻 Technologies Used
 
 1. Model Context Protocol (MCP)
@@ -32,11 +30,13 @@ By the end of this session, learners will be able to:
 1. Python 3.12, FastMCP, uv (venv + deps), CSV
 
 ### 🔗 Session Resources
+
 | Resources          | Links                             | Description        |
 |:-------------------|:----------------------------------|:-------------------|
 | Additional Resources for this session | [https://learn.microsoft.com](https://learn.microsoft.com?ocid=AITour26_resourcecenter_cnl) | Links specific to this session |
 
 ### 📚 Continued Learning Resources
+
 | Resources          | Links                             | Description        |
 |:-------------------|:----------------------------------|:-------------------|
 | MCP for Beginners (GitHub) | [https://github.com/microsoft/mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) | Beginner-friendly MCP guide with examples and docs |
@@ -61,9 +61,7 @@ Additional Languages Coming Soon
     
 </tr></table>
 
-## 
-
-## Responsible AI 
+## Responsible AI
 
 Microsoft is committed to helping our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships through tools like Transparency Notes and Impact Assessments. Many of these resources can be found at [https://aka.ms/RAI](https://aka.ms/RAI).
 Microsoft’s approach to responsible AI is grounded in our AI principles of fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability.

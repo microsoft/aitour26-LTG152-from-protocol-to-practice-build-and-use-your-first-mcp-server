@@ -1,4 +1,7 @@
 {
   "python.defaultInterpreterPath": "${workspaceFolder}/src/.venv/bin/python",
-  "python.terminal.activateEnvironment": true
+  "python.terminal.activateEnvironment": true,
+  "markdownlint.config": {
+    "MD029": false
+  }
 }
