@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "expenses-mcp": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/src/.venv/bin/python",
+      "args": [
+        "-u",
+        "${workspaceFolder}/src/main.py"
+      ]
+    }
+  },
+  "inputs": []
+}
