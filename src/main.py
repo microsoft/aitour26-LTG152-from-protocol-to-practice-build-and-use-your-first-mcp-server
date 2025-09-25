@@ -99,16 +99,12 @@ async def get_expenses_data():
 
 @mcp.prompt
 def create_expense_prompt(
-    expense_date: date,
-    amount: float,
-    category: str,
-    description: str,
-    payment_method: str,
+    date: date, amount: float, category: str, description: str, payment_method: str
 ) -> str:
     """Generate a prompt to add a new expense using the add_expense tool."""
 
     logger.info(f"Expense prompt created for: {description}")
-    date_iso = expense_date.isoformat()
+    date_iso = date.isoformat()
 
     return f"""Please add the following expense:
 - Date: {date_iso}
