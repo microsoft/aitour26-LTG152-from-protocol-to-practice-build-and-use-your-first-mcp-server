@@ -2,10 +2,11 @@
   "servers": {
     "expenses-mcp": {
       "type": "stdio",
-      "command": "${workspaceFolder}/src/.venv/bin/python",
+      "cwd": "${workspaceFolder}/src",
+      "command": ".venv/bin/python",
       "args": [
         "-u",
-        "${workspaceFolder}/src/main.py"
+        "main.py"
       ]
     }
   },
