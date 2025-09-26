@@ -1,16 +1,11 @@
-from pathlib import Path
 import csv
 import logging
-from datetime import datetime
-from fastmcp import FastMCP
+from datetime import date
 from enum import Enum
+from pathlib import Path
+from typing import Annotated
 
-
-class PaymentMethod(Enum):
-    AMEX = "amex"
-    VISA = "visa"
-    CASH = "cash"
-
+from fastmcp import FastMCP
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 logger = logging.getLogger("ExpensesMCP")
@@ -19,29 +14,38 @@ logger = logging.getLogger("ExpensesMCP")
 SCRIPT_DIR = Path(__file__).parent.parent
 EXPENSES_FILE = SCRIPT_DIR / "data" / "expenses.csv"
 
+
 mcp = FastMCP("Expenses Tracker")
+
+class PaymentMethod(Enum):
+    AMEX = "amex"
+    VISA = "visa"
+    CASH = "cash"
+
+
+class Category(Enum):
+    FOOD = "food"
+    TRANSPORT = "transport"
+    ENTERTAINMENT = "entertainment"
+    SHOPPING = "shopping"
+    GADGET = "gadget"
+    OTHER = "other"
 
 
 @mcp.tool
 async def add_expense(
-    date: str,
-    amount: float,
-    category: str,
-    description: str,
-    payment_method: PaymentMethod,
+    date: Annotated[date, "Date of the expense in YYYY-MM-DD format"],
+    amount: Annotated[float, "Positive numeric amount of the expense"],
+    category: Annotated[Category, "Category label"],
+    description: Annotated[str, "Human-readable description of the expense"],
+    payment_method: Annotated[PaymentMethod, "Payment method used"],
 ):
-    """Add a new expense to the expenses.csv file.
+    """Add a new expense to the expenses.csv file."""
+    if amount <= 0:
+        return "Error: Amount must be positive"
 
-    payment_method: The payment method used. Must be one of: card, cash.
-    """
-    try:
-        datetime.fromisoformat(date)
-        if amount <= 0:
-            return "Error: Amount must be positive"
-    except ValueError as e:
-        return f"Error: {str(e)}"
-
-    logger.info(f"Adding expense: ${amount} for {description}")
+    date_iso = date.isoformat()
+    logger.info(f"Adding expense: ${amount} for {description} on {date_iso}")
 
     try:
         file_exists = EXPENSES_FILE.exists()
@@ -54,9 +58,9 @@ async def add_expense(
                     ["date", "amount", "category", "description", "payment_method"]
                 )
 
-            writer.writerow([date, amount, category, description, payment_method.name])
+            writer.writerow([date_iso, amount, category.value, description, payment_method.name])
 
-        return f"Successfully added expense: ${amount} for {description} on {date}"
+        return f"Successfully added expense: ${amount} for {description} on {date_iso}"
 
     except Exception as e:
         logger.error(f"Error adding expense: {str(e)}")
