@@ -13,7 +13,7 @@ If you will be delivering this session, check the [session-delivery-sources](./s
 
 ### Session Description
 
-In this talk, discover how the Model Context Protocol (MCP) is transforming the way AI agents connect with tools, data and each other in a standardized way and is becoming part of the Microsoft ecosystem, whether you're working in Azure AI Foundry, Copilot Studio or GitHub Copilot. MCP is more than a protocol—it’s the connective tissue for building intelligent, interoperable systems. You’ll get a fast-paced, hands-on introduction to MCP fundamentals, then dive into building your own MCP server, using it in VS Code as the host and GitHub Copilot as the client.
+In this talk, discover how the Model Context Protocol (MCP) is transforming the way AI agents connect with tools, data and each other in a standardized way. Dive into building your own MCP server, connecting a client, and validating your setup using the official MCP Inspector.
 
 ### 🧠 Learning Outcomes
 
